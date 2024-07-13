@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 const MobileNav = () => {
   const pathname = usePathname();
   return (
-    <section className="w-full max-w-[264px]">
+    <main className="w-full max-w-[264px]">
       <Sheet>
         <SheetTrigger className="flex items-center justify-center">
           <MenuIcon width={36} height={36} className="text-white" />
@@ -44,9 +44,8 @@ const MobileNav = () => {
                     pathname.startsWith(`${link.route}/`);
 
                   return (
-                    <SheetClose asChild>
+                    <SheetClose key={id} asChild>
                       <Link
-                        key={id}
                         href={link.route}
                         className={cn(
                           "flex items-center gap-4 p-4 rounded-lg justify-start",
@@ -71,7 +70,7 @@ const MobileNav = () => {
           </div>
         </SheetContent>
       </Sheet>
-    </section>
+    </main>
   );
 };
 

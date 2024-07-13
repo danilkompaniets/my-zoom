@@ -9,6 +9,9 @@
   .flex-between {
     @apply flex justify-between items-center;
   }
+  .glassmorphizm {
+    @apply backdrop-blur-2xl
+  }
 }
 
 @layer base {
